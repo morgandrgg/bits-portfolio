@@ -358,7 +358,7 @@
 
 .contact-left h1 {
     font-size: 150%;
-    margin-left: -60%;
+    margin-left: -40%;
     margin-top: 25%;
 }
 
@@ -368,7 +368,7 @@
 
 .contact-left p i {
     color: #fff;
-    margin-left: 40px;
+    margin-left: 50px;
     font-size: 18px;
     margin-top: 20px;
 }
@@ -524,9 +524,9 @@ span {
         position: fixed;
         display: block;
         flex-direction: column;
-        margin-top: -3%;
+        margin-top: -10%;
         right: -200px;
-        height: 90vh;
+        height: 100vh;
 
         z-index: 2;
         transition: right 0.5s;
@@ -579,10 +579,14 @@ span {
     }
 
     /* ---------------------------------------------This is my about section---------------------------- */
+    #content {
+        height: max-content;
+    }
+
     .text-box {
-        margin-top: 10%;
+        margin-top: 30%;
         font-size: 16px;
-        margin-left: 5%;
+        margin-left: 4.5%;
     }
 
     .text-box p {
@@ -605,7 +609,7 @@ span {
 
     .image img {
         margin-top: 90%;
-        margin-left: 5%;
+        margin-left: 4.5%;
         height: max-content;
         width: 80%;
         margin-bottom: 40%;
@@ -745,33 +749,40 @@ span {
         font-size: 30px;
         text-align: left;
         padding: 0 10px;
-        margin-left: -10%;
+        margin-left: -20px;
         margin-top: 50px;
         margin-bottom: 40px;
     }
 
     .contact-left p {
         margin-top: 10px;
-        margin-left: -10%;
+        margin-left: -55px;
     }
 
     .social-icons {
-        margin-left: -10%;
+        display: flex;
+        flex-direction: column;
+        margin-left: -20px;
     }
 
 
-    /* .btn-2 {
-        margin-top: -55%;
-        margin-left: 40%;
-        margin-right: 10%;
-    } */
+    .btn-2 {
+        margin: auto;
+        margin-top: -220px;
+        margin-right: 55px;
+    }
 
     #btn3 {
         text-align: center;
-        margin-right: 20%;
+        margin-right: 30%;
         font-size: 10px;
-        width: 70%;
-        height: 70px;
+        width: 80%;
+        height: 45px;
+        margin-bottom: -60px;
+    }
+
+    .btn a {
+        text-align: center;
     }
 
 
@@ -793,7 +804,7 @@ span {
         cursor: pointer;
         margin: 20px;
         width: 100px;
-        height: 50px;
+        height: 45px;
         border-radius: 10px;
         text-align: center;
     }
@@ -805,12 +816,12 @@ span {
     form input,
     form textarea {
         width: 100%;
-        height: 80px;
+        height: 60px;
         border: 0;
         outline: none;
         background: #fff;
         padding: 15px;
-        margin: 15px;
+        margin: 15px auto;
         color: black;
         font-size: 18px;
         border-radius: 6px;
