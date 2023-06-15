@@ -2,22 +2,32 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --alice-blue: #CBD0D8;
+    --blue: #0D2863;
+    --near-white: #F4F3EA;
 }
 
 /*------------------------------------------ This the navigation menu--------------------------- */
+body {
+    background: var(--near-white);
+}
 
 #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 3% 5%;
-    background: rgba(13, 40, 99, 0.8);
+    background: var(--blue);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     top: 0;
     left: 0;
     height: 60px;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     z-index: 10000;
 }
 
@@ -50,7 +60,7 @@
 
 #navbar li a:hover,
 #navbar li a.active {
-    color: white;
+    color: var(--near-white);
 }
 
 #navbar li a.active::after,
@@ -58,7 +68,7 @@
     content: "";
     width: 50%;
     height: 2px;
-    background: #080808;
+    background: var(--alice-blue);
     position: absolute;
     bottom: -4px;
     left: 20px;
@@ -66,13 +76,13 @@
 
 /*------------------------------------- This is the Home section------------------------------------- */
 #content {
-    height: max-content;
+    height: 100vh;
     width: 100%;
-    background: linear-gradient(180deg, rgba(13, 40, 99, 0.8) 73.44%, rgba(16, 76, 166, 0.87) 100%);
+    background: var(--alice-blue);
 }
 
 .text-box {
-    color: #fff;
+    color: var(--blue);
     position: absolute;
     top: 20%;
     left: 5%;
@@ -90,8 +100,8 @@
     line-height: 160px;
     margin-left: -3%;
     color: transparent;
-    -webkit-text-stroke: 1px #fff;
-    background: url("./assets/back.png");
+    -webkit-text-stroke: 1px var(--blue);
+    background: url("./assets/back.png") rgba(13, 40, 99, 1);
     -webkit-background-clip: text;
     background-position: 0 7;
     animation: back 20s linear infinite;
@@ -106,21 +116,42 @@
 .text-box h3 {
     font-size: 100%;
     font-weight: 500;
-    color: #fff;
+    color: var(--blue);
     letter-spacing: -10%;
 }
 
+.text-btn {
+    height: 45px;
+    width: 200px;
+    background-color: var(--blue);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 30px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.text-btn a {
+    text-decoration: none;
+    color: var(--near-white);
+}
+
 .image img {
-    height: 60%;
+    height: 35%;
     width: 35%;
     margin-left: 55%;
     margin-right: 10%;
-    margin-top: 5%;
+    margin-top: 10%;
     margin-bottom: 18%;
 }
 
+
 /* -------------------This is the about me section---------------------------s */
 
+#about-me {
+    position: relative;
+}
 
 #about-me h1 {
     text-align: center;
@@ -130,6 +161,7 @@
     margin-top: 5%;
     margin-bottom: 5%;
     width: 100%;
+    color: var(--blue);
 }
 
 .about-content {
@@ -139,7 +171,7 @@
     margin-right: 10%;
     margin-left: 10%;
     margin-bottom: 10%;
-    background: rgba(13, 40, 99, 0.8);
+    background: var(--blue);
     border-bottom-left-radius: 80px;
     border-top-right-radius: 80px;
 }
@@ -152,9 +184,10 @@
 }
 
 .image-1 img {
-    height: 280px;
+    height: 300px;
     width: 200px;
     margin: 20px 0 20px 20px;
+    margin-top: 10px;
     border-radius: 10px;
     border-bottom-left-radius: 80px;
     border-top-left-radius: 0;
@@ -176,17 +209,57 @@
     overflow: hidden;
 }
 
+.about {
+    margin-top: -30px;
+    margin-bottom: 30px;
+    margin-left: 20%;
+}
+
+.text-btn2 {
+    height: 45px;
+    width: 200px;
+    background-color: var(--near-white);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+a .text-btn2 {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.bac {
+    display: none;
+    margin-top: -80px;
+    margin-bottom: 20px;
+    margin-left: 95%;
+}
+
+.back-to-top {
+    height: 45px;
+    width: 30px;
+    position: sticky;
+    z-index: 90;
+}
+
+.back-to-top a button i {
+    color: var(--blue);
+}
+
 /* -----------------------------------------------This is My work section ----------------------------- */
 
 
 #portfolio {
     padding: 30px 0;
     height: max-content;
-    background: linear-gradient(180deg, rgba(13, 40, 99, 0.8) 73.44%, rgba(16, 76, 166, 0.87) 100%);
+    background: var(--blue);
 }
 
 .sub-title {
-    color: #fff;
+    color: var(--near-white);
     text-align: center;
     font-size: 200%;
 }
@@ -241,16 +314,18 @@
     font-weight: 500;
 }
 
-.layer a {
+.layer a button {
     margin-top: 20px;
-    color: rgba(13, 40, 99, 0.8);
+    color: var(--blue);
     text-decoration: none;
     font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 20%;
-    height: 15%;
-    border-radius: 50%;
+    background: var(--alice-blue);
+    width: 200px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    cursor: pointer;
 }
 
 .work:hover .layer {
@@ -264,18 +339,78 @@
     margin-bottom: 7%;
 }
 
-.services h1 {
-    margin-bottom: 3%;
-}
-
 .services p {
     margin-bottom: 3%;
 }
 
-.services-box {
-    background: rgba(13, 40, 99, 0.8);
+.services-box1 {
+    background: var(--alice-blue);
+    height: 350px;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    margin-bottom: -200px;
+    width: 550px;
+}
+
+.service-head h2 {
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.s-head h2 {
+    margin-top: 20px;
+}
+
+#serve {
+    display: flex;
+    flex-direction: column;
+}
+
+.first .icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.icons {
+    margin-left: 100px;
+}
+
+.two p {
+    text-align: justify;
+    margin-left: -35px;
+    font-size: 16px;
+    color: var(--blue);
+}
+
+.icons i {
+    margin-bottom: 70px;
+}
+
+.icons .fa,
+.fa-brands {
+    width: 50px;
+    height: 50px;
+    font-size: 60px;
+    color: var(--blue);
+}
+
+.service-head {
+    width: 100%;
+}
+
+.first h2 {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.second {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    background: var(--alice-blue);
     padding: 10px;
-    height: 150%;
+    height: 350px;
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
 }
@@ -299,8 +434,8 @@
     padding: 10px;
 }
 
-.services-box:hover {
-    box-shadow: 60px 60px 60px rgba(0, 0, 0, 0.25);
+.second:hover {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
     transition: 1s;
@@ -330,8 +465,38 @@
     justify-content: center;
 }
 
-.col-md-4 {
-    margin: 2%;
+#skills-section {
+    margin-top: -30px;
+}
+
+#skills-section h2 {
+    color: var(--blue);
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+}
+
+#skills-section h3 {
+    color: var(--blue);
+    text-align: justify;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    margin-left: 60px;
+}
+
+ul {
+    list-style-type: disc;
+    color: #888;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 5px;
 }
 
 /* -----------------------------------------This is my contact section ---------------------------- */
@@ -339,7 +504,7 @@
     height: max-content;
     display: flex;
     width: 100%;
-    background-image: linear-gradient(180deg, rgba(13, 40, 99, 0.8) 73.44%, rgba(16, 76, 166, 0.87) 100%), url("./assets/mine.jpg");
+    background-image: linear-gradient(180deg, rgba(203, 208, 216, 0.7) 99.99%, #0D2863 100%), url("./assets/mine.jpg");
     background-size: cover;
     object-fit: cover;
 }
@@ -360,6 +525,7 @@
     font-size: 150%;
     margin-left: -40%;
     margin-top: 25%;
+    color: var(--blue);
 }
 
 .contact-left p {
@@ -367,14 +533,14 @@
 }
 
 .contact-left p i {
-    color: #fff;
+    color: var(--blue);
     margin-left: 50px;
     font-size: 18px;
     margin-top: 20px;
 }
 
 .contact-left p a {
-    color: #fff;
+    color: var(--blue);
     margin-left: 10px;
     text-decoration: none;
     font-size: 18px;
@@ -391,7 +557,7 @@
     text-decoration: none;
     font-size: 18px;
     padding: 10px;
-    color: #fff;
+    color: var(--blue);
     transition: transform, 0.5s;
 }
 
@@ -410,7 +576,9 @@
     margin-bottom: 0;
 }
 
-
+.btn22 {
+    border-radius: 50px
+}
 
 .btn {
     background-color: black;
@@ -433,11 +601,12 @@
 .btn:hover {
     background: transparent;
     border: 2px solid black;
+    color: var(--blue);
 }
 
 .btn a {
     text-decoration: none;
-    color: #fff;
+    color: var(--blue);
 }
 
 #btn-back {
@@ -481,14 +650,19 @@ form .btn2 {
 .copyright {
     width: 100%;
     text-align: center;
+    height: 50px;
     padding: 25px 0;
-    background: #fff;
+    background: var(--blue);
     font-weight: 300;
-    margin-top: 20px;
+}
+
+.copyright p {
+    margin: auto;
+    color: var(--near-white);
 }
 
 .copyright i {
-    color: rgba(13, 40, 99, 0.8);
+    color: var(--near-white);
 }
 
 span {
@@ -509,25 +683,24 @@ span {
         box-sizing: border-box;
     }
 
-    #header {
-        background: rgba(13, 40, 99, 0.8);
-        width: auto;
-    }
-
     #content {
         height: max-content;
-        background: linear-gradient(180deg, rgba(13, 40, 99, 0.8) 73.44%, rgba(16, 76, 166, 0.87) 100%);
+        background: var(--alice-blue);
+    }
+
+    #navbar .fa-times {
+        top: 5%;
     }
 
     .head ul {
         background: rgba(13, 40, 99, 0.8);
         position: fixed;
         display: block;
+        justify-content: flex-start;
         flex-direction: column;
-        margin-top: -10%;
         right: -200px;
-        height: 100vh;
-
+        justify-content: left;
+        height: 100%;
         z-index: 2;
         transition: right 0.5s;
     }
@@ -538,6 +711,7 @@ span {
         color: #000;
         padding: 8px 16px;
         text-decoration: none;
+        text-align: left;
     }
 
     #navbar li a.active::after,
@@ -561,8 +735,8 @@ span {
     }
 
     li a:hover {
-        background-color: #555;
-        color: white;
+        background-color: var(--blue);
+        color: var(--near-white);
     }
 
     .head .fas {
@@ -573,9 +747,25 @@ span {
 
     .head ul .fas {
         position: absolute;
-        top: 25px;
         left: 25px;
         cursor: pointer;
+    }
+
+    .text-btn {
+        height: 45px;
+        width: 200px;
+        background-color: var(--blue);
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        margin-top: 30px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .text-btn a {
+        text-decoration: none;
+        color: var(--near-white);
     }
 
     /* ---------------------------------------------This is my about section---------------------------- */
@@ -643,14 +833,41 @@ span {
         overflow: hidden;
     }
 
-    /* --------------------------------------this is my work section --------------------------- */
-    .sub-title {
-        text-align: left;
-        padding: 0 40px;
+    .bac {
+        display: block;
+        margin-top: -80px;
+        margin-bottom: 20px;
+        margin-left: 95%;
     }
 
-    .sub-title h1 {
-        font-size: 30px;
+    .back-to-top {
+        height: 45px;
+        width: 30px;
+        position: sticky;
+        z-index: 90;
+    }
+
+    .back-to-top a button i {
+        color: var(--blue);
+    }
+
+    /* --------------------------------------this is my work section --------------------------- */
+    .subtittle {
+        text-align: center;
+        padding: 0 40px;
+        font-size: 100px;
+        color: white;
+    }
+
+    .bt {
+        color: white;
+        text-align: center;
+        padding: 0 40px;
+        font-size: 100px;
+        position: absolute;
+        z-index: 999;
+        margin-left: 40px;
+        margin-top: -40px;
     }
 
     #portfolio {
@@ -696,7 +913,7 @@ span {
     }
 
     .work:hover .layer {
-        height: 98.8%;
+        height: 100%;
     }
 
     /* ---------------------------this is my services -------------------------------- */
@@ -704,43 +921,184 @@ span {
     .services {
         margin-top: 2%;
         padding-bottom: 10%;
-        margin-bottom: 10%;
-    }
-
-    .services h1 {
-        margin-bottom: 2%;
-        font-size: 12px;
+        margin-bottom: 8%;
     }
 
     .services p {
-        margin-bottom: 5%;
-        font-size: 11px;
+        margin-bottom: 3%;
     }
 
-    .services-box {
-        background: rgba(13, 40, 99, 0.8);
+    .services-box1 {
+        background: var(--alice-blue);
+        height: 220px;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        margin-bottom: -200px;
+        width: 100%;
+    }
+
+    .service-head h2 {
+        font-weight: 700;
+        color: var(--blue);
+    }
+
+    .s-head h2 {
+        margin-top: 20px;
+    }
+
+    #serve {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .first .icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .icons {
+        margin-left: 40px;
+    }
+
+    .two p {
+        text-align: justify;
+        margin-left: -35px;
+        font-size: 16px;
+        color: var(--blue);
+    }
+
+    .icons i {
+        margin-bottom: 40px;
+    }
+
+    .icons .fa,
+    .fa-brands {
+        width: 50px;
+        height: 50px;
+        font-size: 30px;
+        color: var(--blue);
+    }
+
+    .service-head {
+        width: 100%;
+    }
+
+    .first h2 {
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .second {
+        display: flex;
+        flex-direction: column;
+        margin-top: 240px;
+        margin-bottom: 5px;
+        background: var(--alice-blue);
         padding: 10px;
-        height: 150%;
-        border-top-right-radius: 60px;
-        border-bottom-left-radius: 60px;
+        height: 350px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        margin-bottom: -40px;
     }
 
     .services-box .fa {
-        margin-left: -10%;
+        margin: 20% 10% 0 10%;
         font-size: 200%;
     }
 
-    .col-md-4 {
-        margin: 10%;
+    .services-box span {
+        margin: 3px;
+        font-size: 17px;
+        font-weight: 600;
+        color: #fff;
+    }
+
+    .services-box p {
+        font-size: 15px;
+        margin-top: 20px;
+        color: white;
+        padding: 10px;
+    }
+
+    .second:hover {
+        /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25); */
+        border-top-right-radius: 60px;
+        border-bottom-left-radius: 60px;
+        transition: 1s;
+    }
+
+    .services-box:hover p {
+        color: #fff;
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .container h1 {
+        font-size: 24px;
+        letter-spacing: 15%;
+        font-weight: 800;
+        color: var(--blue);
+    }
+
+    .container p {
+        font-size: 17px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #skills-section {
+        margin-top: -30px;
+    }
+
+    #skills-section h2 {
+        color: var(--blue);
+        text-align: justify;
+        font-size: 16px;
+        margin-bottom: 10px;
+        margin-left: 60px;
+    }
+
+    #skills-section h3 {
+        color: var(--blue);
+        text-align: justify;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        margin-left: 60px;
+    }
+
+    ul {
+        list-style-type: disc;
+        color: #888;
+        font-size: 16px;
+        margin-left: 20px;
+        margin-bottom: 15px;
+    }
+
+    li {
+        margin-bottom: 5px;
     }
 
     /* -------------------------------this is my contact section----------------- */
 
     #contact-me {
-        height: fit-content;
+        height: 115vh;
+        display: flex;
+        width: fit-content;
+        background-image: linear-gradient(180deg, rgba(203, 208, 216, 0.7) 99.99%, #0D2863 100%), url("./assets/mine.jpg");
+        background-size: contain;
+        object-fit: contain;
     }
 
-    .row {
+    .column {
         display: block;
         flex-direction: column;
     }
@@ -826,4 +1184,36 @@ span {
         font-size: 18px;
         border-radius: 6px;
     }
+
+    .your-msg {
+        height: 150px;
+    }
+
+    form .btn2 {
+        padding: 14px 60px;
+        font-size: 18px;
+        margin-top: 20px;
+        cursor: pointer;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+        height: 50px;
+        padding: 25px 0;
+        background: var(--blue);
+        font-weight: 300;
+        margin-top: 0px;
+    }
+
+    .copyright p {
+        margin-top: -15px;
+        margin-left: 1px;
+        color: var(--near-white);
+    }
+
+    .copyright i {
+        color: var(--near-white);
+    }
+
 }
