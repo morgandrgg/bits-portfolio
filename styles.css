@@ -11,6 +11,14 @@
     --near-white: #F4F3EA;
 }
 
+/* --------------This the thank you page styles--------------- */
+.thank-you{
+    text-align: center;
+    margin: auto;
+    font-weight: 700;
+    color: #0D2863;
+}
+
 /*------------------------------------------ This the navigation menu--------------------------- */
 body {
     background: var(--near-white);
@@ -771,10 +779,11 @@ span {
     /* ---------------------------------------------This is my about section---------------------------- */
     #content {
         height: max-content;
+        width: fit-content !important;
     }
 
     .text-box {
-        margin-top: 30%;
+        margin-top: 8%;
         font-size: 16px;
         margin-left: 4.5%;
     }
@@ -802,7 +811,7 @@ span {
         margin-left: 4.5%;
         height: max-content;
         width: 80%;
-        margin-bottom: 40%;
+        margin-bottom: 20%;
     }
 
     .about-content {
@@ -813,6 +822,10 @@ span {
         background: rgba(13, 40, 99, 0.8);
         border-bottom-left-radius: 80px;
         border-top-right-radius: 80px;
+    }
+
+    #about-me {
+        margin-bottom: 50px;
     }
 
     #about-me h1 {
@@ -826,24 +839,30 @@ span {
     }
 
     .about-text p {
-        padding: 20px 20px;
-        font-size: 45%;
+        padding: 20px 20px 1px 20px;
+        font-weight: 400;
+        font-size: 0.5rem;
         line-height: 120%;
         justify-content: center;
         overflow: hidden;
+    }
+
+    .about a #btn3 {
+        background: var(--near-white);
+        color: #0D2863;
     }
 
     .bac {
         display: block;
         margin-top: -80px;
         margin-bottom: 20px;
-        margin-left: 95%;
+        margin-left: 90%;
     }
 
     .back-to-top {
         height: 45px;
         width: 30px;
-        position: sticky;
+        position: static;
         z-index: 90;
     }
 
@@ -866,8 +885,8 @@ span {
         font-size: 100px;
         position: absolute;
         z-index: 999;
-        margin-left: 40px;
-        margin-top: -40px;
+        margin-left: 30px;
+        margin-top: -60px;
     }
 
     #portfolio {
@@ -877,6 +896,7 @@ span {
     .work-list {
         flex-direction: column;
         justify-content: center;
+        margin-top: 50px !important;
     }
 
     .work img {
@@ -1090,10 +1110,10 @@ span {
     /* -------------------------------this is my contact section----------------- */
 
     #contact-me {
-        height: 115vh;
+        height: max-content;
         display: flex;
         width: fit-content;
-        background-image: linear-gradient(180deg, rgba(203, 208, 216, 0.7) 99.99%, #0D2863 100%), url("./assets/mine.jpg");
+        background-image: linear-gradient(180deg, rgba(203, 208, 216, 0.7) 99.99%, #0D2863 100%);
         background-size: contain;
         object-fit: contain;
     }
@@ -1109,11 +1129,11 @@ span {
         padding: 0 10px;
         margin-left: -20px;
         margin-top: 50px;
-        margin-bottom: 40px;
+        margin-bottom: 0px;
     }
 
     .contact-left p {
-        margin-top: 10px;
+        margin-top: 0px;
         margin-left: -55px;
     }
 
@@ -1132,6 +1152,7 @@ span {
 
     #btn3 {
         text-align: center;
+        background: #0D2863;
         margin-right: 30%;
         font-size: 10px;
         width: 80%;
@@ -1171,6 +1192,10 @@ span {
         padding-right: 20px;
     }
 
+    .contact-right {
+        margin-top: -125px;
+    }
+
     form input,
     form textarea {
         width: 100%;
@@ -1179,7 +1204,7 @@ span {
         outline: none;
         background: #fff;
         padding: 15px;
-        margin: 15px auto;
+        margin: 15px 5px 0px 15px;
         color: black;
         font-size: 18px;
         border-radius: 6px;
@@ -1193,7 +1218,9 @@ span {
         padding: 14px 60px;
         font-size: 18px;
         margin-top: 20px;
+        background: #0D2863;
         cursor: pointer;
+        text-align: center;
     }
 
     .copyright {
@@ -1203,7 +1230,7 @@ span {
         padding: 25px 0;
         background: var(--blue);
         font-weight: 300;
-        margin-top: 0px;
+        /* margin-top: 100px; */
     }
 
     .copyright p {

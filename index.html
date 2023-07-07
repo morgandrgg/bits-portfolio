@@ -93,10 +93,10 @@
                     </div>
                 </div>
             </div>
-            <div class="bac"><a href="#header">
-                    <button class="back-to-top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button></a>
-            </div>
         </div>
+        <!-- <div class="bac"><a href="#header">
+                <button class="back-to-top"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></button></a>
+        </div> -->
     </section>
 
 
@@ -216,11 +216,16 @@
                         </div>
                     </div>
                     <div class="contact-right">
-                        <form name="submit-to-google-sheet">
+                        <form name="submit-to-google-sheet" action="https://formsubmit.co/benkim388@gmail.com" method="POST">
+                            <input type="hidden" name="_next" value="./Pages/thankyou.html">
+                            <input type="hidden" name="_subject" value="New Submission from your Portfolio">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_autoresponse" value="Thank you for the message I will contact you soon">
+
                             <input type="text" name="Name" placeholder="Your Name" required>
                             <input type="email" name="Email" placeholder="Your Email" required>
-                            <textarea class="your-msg" name="Message" row="6" placeholder="Your Message"></textarea>
-                            <button type="submit" class="btn btn2" id="btn-back">Submit</button>
+                            <textarea type="text" class="your-msg" name="Message" row="6" placeholder="Your Message"></textarea>
+                            <button type="submit"  value="../thankyou.html" class="btn btn2" id="btn-back">Submit</button>
                         </form>
                         <span id="msg"></span>
                     </div>
